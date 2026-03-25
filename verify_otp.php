@@ -30,14 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit();
 
     } else {
-        $message = "❌ Invalid or expired OTP!";
+        $message = "Invalid or expired OTP!";
     }
 }
 ?>
 
 <h2>Verify OTP</h2>
 
-<!-- ✅ Show OTP for testing -->
+<!-- Show OTP for testing -->
 <?php if (isset($_SESSION['debug_otp'])) { ?>
     <p style="color:green;">Your OTP (for testing): <b><?php echo $_SESSION['debug_otp']; ?></b></p>
 <?php } ?>
