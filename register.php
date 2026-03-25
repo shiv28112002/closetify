@@ -10,14 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($username) || empty($email) || empty($password)) {
         $error = "Please fill in all fields.";
     } else {
-        // ✅ HASH THE PASSWORD
+        // HASH THE PASSWORD
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // ✅ DEBUG OUTPUT (you can remove later)
+        // DEBUG OUTPUT (you can remove later)
         echo "Raw Password: " . $password . "<br>";
         echo "Hashed Password: " . $hashed_password . "<br>";
 
-        // ✅ INSERT INTO DATABASE
+        // INSERT INTO DATABASE
         $stmt = $mysqli->prepare("INSERT INTO userdata (username, email, password) VALUES (?, ?, ?)");
         if (!$stmt) {
             die("Prepare failed: " . $mysqli->error);
