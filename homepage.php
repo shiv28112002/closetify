@@ -28,7 +28,7 @@ if (!isset($_SESSION['user_id'])) {
           <img src="./assets/user (2).png" alt="User" class="w-14 h-14 rounded-full border-2 border-indigo-600 shadow-md">
           <div>
             <h1 class="text-2xl md:text-3xl font-bold text-indigo-800">
-              Hello, <?php echo htmlspecialchars($_SESSION['username']); ?> 👋
+              Hello, <?php echo htmlspecialchars($_SESSION['username']); ?>
             </h1>
             <p class="text-indigo-600 text-md md:text-lg mt-1">Welcome back to Closetify!</p>
           </div>
